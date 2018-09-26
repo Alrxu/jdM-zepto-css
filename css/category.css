@@ -1,0 +1,212 @@
+/* 公共变量 */
+/* 样式重置 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /*在移动端设置盒模型border-box 为了防止元素加边框或者padding出现水平滚动条*/
+  box-sizing: border-box;
+  /* 去除移动端按住元素的时候会出现高亮背景色 */
+  -webkit-tap-highlight-color: transparent;
+  /* 去掉所有移动端内边框 */
+  outline: none;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+input {
+  border: 0;
+}
+img {
+  /* 解决图片底部3px的间隙 为了让图片的对齐方式和文本一致*/
+  vertical-align: middle;
+}
+i {
+  font-style: normal;
+}
+/* 公共样式 */
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+[class^="icon_"],
+[class*=" icon_"] {
+  background-image: url("../images/sprites.png");
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+}
+.bd-left {
+  border-left: 1px solid #ccc;
+}
+.bd-right {
+  border-right: 1px solid #ccc;
+}
+.bd-top {
+  border-top: 1px solid #ccc;
+}
+.bd-bottom {
+  border-bottom: 1px solid #ccc;
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 640px;
+  background-color: #fff;
+}
+#footer > ul {
+  display: flex;
+}
+#footer > ul > li {
+  flex: 1;
+}
+#footer > ul > li > a {
+  display: block;
+  text-align: center;
+}
+#footer > ul > li > a > img {
+  width: 65px;
+  height: 50px;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+body {
+  padding: 40px 0 50px 0;
+}
+#container {
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  height: 100%;
+}
+#container #header {
+  position: fixed;
+  top: 0;
+  max-width: 640px;
+  width: 100%;
+  height: 40px;
+  background-color: #f5f5f5;
+  display: flex;
+  z-index: 990;
+}
+#container #header .icon_back {
+  display: block;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  background-position: -20px 0;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+#container #header .search {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+#container #header .search > input {
+  width: 100%;
+  height: 30px;
+  margin-top: 5px;
+  border-radius: 15px;
+  padding-left: 34px;
+}
+#container #header .search .icon_search {
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  width: 23px;
+  height: 16px;
+  background-position: -80px 0;
+}
+#container #header .icon_more {
+  display: block;
+  width: 42px;
+  height: 40px;
+  padding: 10px;
+  background-position: -61px 0;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+#container #main {
+  height: 100%;
+  display: flex;
+  width: 100%;
+}
+#container #main #contentL {
+  height: 100%;
+  overflow: hidden;
+  width: 100px;
+  background-color: #f5f5f5;
+}
+#container #main #contentL .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+#container #main #contentL .swiper-container .swiper-slide {
+  height: auto;
+}
+#container #main #contentL .swiper-container .swiper-slide > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 12px;
+}
+#container #main #contentL .swiper-container .swiper-slide > ul > li.active > a {
+  color: #bb1624;
+  background-color: #fff;
+}
+#container #main #contentR {
+  height: 100%;
+  overflow: hidden;
+  flex: 1;
+  padding: 10px;
+}
+#container #main #contentR .swiper-container {
+  height: 100%;
+}
+#container #main #contentR .swiper-container .swiper-slide {
+  height: auto;
+}
+#container #main #contentR .swiper-container .swiper-slide .conBox {
+  margin-top: 20px;
+}
+#container #main #contentR .swiper-container .swiper-slide .conBox > h4 {
+  margin-bottom: 10px;
+  height: 30px;
+  width: 100%;
+}
+#container #main #contentR .swiper-container .swiper-slide .conBox .content > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#container #main #contentR .swiper-container .swiper-slide .conBox .content > ul > li {
+  width: 33.33%;
+}
+#container #main #contentR .swiper-container .swiper-slide .conBox .content > ul > li > a {
+  display: block;
+  text-align: center;
+}
+#container #main #contentR .swiper-container .swiper-slide .conBox .content > ul > li > a > img {
+  width: 70px;
+  height: 70px;
+}
+#container #main #contentR .swiper-container .swiper-slide .conBox .content > ul > li > a > span {
+  display: block;
+  font-size: 12px;
+  line-height: 40px;
+}
